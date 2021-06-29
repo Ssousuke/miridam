@@ -17,7 +17,7 @@ class Department(models.Model):
 class Occupation(models.Model):
     occupation = models.CharField(max_length=50, verbose_name='Cargo')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Data de Criação')
-    department = models.ManyToOneRel(Department, on_delete=models.DO_NOTHING, verbose_name='Departamento')
+    department = models.ForeignKey(Department, on_delete=models.DO_NOTHING, verbose_name='Departamento')
     updated_at = models.DateTimeField(auto_now_add=True, verbose_name='Data de Atualização')
 
     def __str__(self):

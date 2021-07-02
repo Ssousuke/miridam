@@ -1,5 +1,7 @@
 from django.db import models
 
+from department.models import Department, Occupation
+
 ETHNIC_COMPOSITION_CHOICES = [
     ('Branca', 'Branca'),
     ('Preta', 'Preta'),
@@ -47,6 +49,8 @@ class Employee(models.Model):
     ctps_issue_date = models.DateField(verbose_name='Data de Emissão CTPS')
     salary = models.FloatField(verbose_name='Salário')
     admission_date = models.DateField(verbose_name='Data de Admissão')
+    department = models.ForeignKey(Department, on_delete=models.DO_NOTHING, verbose_name='Departamento')
+    occupation = models.ForeignKey(Occupation, on_delete=models.DO_NOTHING, verbose_name='Cargo')
 
     def __str__(self):
         return self.name

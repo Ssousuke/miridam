@@ -1,6 +1,6 @@
 # Miridam - Sistemas de gestão de RH - Versão 2
 
-As funções básicas do sistema é de um CRUD com API's, a princio as views rederizarão o frontend em _HTML_. Os usuários logados podem adicionar, remove funcionários, departamentos, cargo e empresas.
+As funções básicas do sistema é de um CRUD com API's, a principio as views rederizarão o frontend em _HTML_. Os usuários logados podem adicionar, remove funcionários, departamentos, cargo e empresas.
 
 ## Como rodar a aplicação
 - Você deve fazer um clone do repositório

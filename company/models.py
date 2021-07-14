@@ -15,8 +15,6 @@ class Company(models.Model):
     cnpj = models.CharField(max_length=14, unique=True, verbose_name='CNPJ')
     state_registration = models.CharField(max_length=15, blank=True, unique=True, verbose_name='Inscrição Estadual')
     state_municipal = models.CharField(max_length=15, blank=True, unique=True, verbose_name='Inscrição municipal')
-    counter = models.ForeignKey(Employee, blank=True, on_delete=models.DO_NOTHING, verbose_name='Contador')
-    administrator = models.ForeignKey(Employee, blank=True, on_delete=models.DO_NOTHING, verbose_name='Administrador')
 
     def __str__(self):
         return self.name

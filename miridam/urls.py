@@ -19,6 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('endereco/', include('address.urls', namespace='address')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', include('dashboard.urls', namespace='dashboard')),
+                  path('address/', include('address.urls', namespace='address')),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="pt-br">
-
-{% include '_includes/_head.html'%}
-
+<head>
+    {% include '_includes/_head.html'%}
+    <title>{% block title %}{% endblock %}</title>
+</head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
     <!-- Navbar -->
@@ -21,6 +22,9 @@
                 {% block content %}
                 {% endblock content %}
             </div>
+            {% block pagination %}
+
+            {% endblock pagination %}
             <!-- /.container-fluid -->
         </div>
         <!-- /.content -->

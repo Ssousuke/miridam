@@ -7,17 +7,8 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <i class="nav-icon far fa-user-circle fa-2x"></i>
-            </div>
-            <div class="info">
-                <a href="#" class="d-block">{{user}}</a>
-            </div>
-        </div>
-
         <!-- SidebarSearch Form -->
-        <div class="form-inline">
+        <div class="form-inline m-2 ">
             <div class="input-group" data-widget="sidebar-search">
                 <input class="form-control form-control-sidebar" type="search" placeholder="Pesquisar"
                        aria-label="Search">
@@ -41,7 +32,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item menu-open">
                     <a href="#" class="nav-link bg-light">
                         <i class="nav-icon fas fa-user-cog"></i>
                         <p>
@@ -51,7 +42,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{% url 'employee:employee'%}" class="nav-link">
                                 <i class="nav-icon fas fa-user-tag"></i>
                                 <p>Funcionários</p>
                             </a>
@@ -84,41 +75,6 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p>Folha de Pagamento</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link bg-light">
-                        <i class="nav-icon fas fa-coins"></i>
-                        <p>
-                            Financeiro
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link bg-danger">
-                                <i class="nav-icon fas fa-money-check-alt"></i>
-                                <p>Contas a Pagar</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link bg-success">
-                                <i class="nav-icon fas fa-money-check-alt"></i>
-                                <p>Contas a Receber</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-briefcase"></i>
-                                <p>Gestão Orçamentária</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-search-dollar"></i>
-                                <p>Consulta de Estoque</p>
                             </a>
                         </li>
                     </ul>

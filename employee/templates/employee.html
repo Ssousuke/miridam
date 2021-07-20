@@ -7,6 +7,7 @@ Miridam | Funcionários
 <div class="container-fluid py-2">
     <div class="container my-2">
         <a type="button" class="btn btn-primary"><i class="fas fa-user-plus m-1"></i>Cadastrar Funcionário</a>
+        <a type="button" class="btn btn-danger"><i class="fas fa-user-times m-1"></i>Funcionário Inativos</a>
     </div>
     <div class="row">
         <div class="col-12">
@@ -35,13 +36,13 @@ Miridam | Funcionários
                         </tr>
                         </thead>
                         <tbody>
+                        {% for employee in employees %}
                         <tr>
-                            <td>Trident</td>
-                            <td>Internet Explorer 4.0
-                            </td>
-                            <td>Win 95+</td>
-                            <td> 4</td>
-                            <td>X</td>
+                            <td>{{ employee.id }}</td>
+                            <td>{{ employee.name }}</td>
+                            <td>{{ employee.cpf }}</td>
+                            <td>{{ employee.admission_date }}</td>
+                            <td>{{ employee.occupation }}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="action buttons">
                                     <a type="button" class="btn btn-primary"><i class="fas fa-eye"></i></a>
@@ -50,6 +51,11 @@ Miridam | Funcionários
                                 </div>
                             </td>
                         </tr>
+                        {% empty%}
+                        <div class="alert alert-dark" role="alert">
+                            Nenhum Funcionário Cadastrado!
+                        </div>
+                        {% endfor %}
                     </table>
                 </div>
                 <!-- /.card-body -->
